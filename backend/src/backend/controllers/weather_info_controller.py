@@ -11,8 +11,7 @@ router = APIRouter()
 def get_weather_service() -> IWeatherService:
     return WeatherService1()
 
-
-# Route exposée pour obtenir les informations météo
+# End points API
 @router.get("/weather/{region_name}", response_model=WeatherResponse)
 async def get_weather_info(
     region_name: str,
@@ -21,7 +20,6 @@ async def get_weather_info(
     
     resp = await weather_service.get_current_weather(region_name)
     return resp
-
 
 @router.get("/weather/forecast/{region_name}", response_model=WeatherForecastResponse)
 async def get_weather_forecast(

@@ -1,20 +1,12 @@
 import React from 'react';
 import './App.css';
-import { RegionInfoDisplay } from './components/region_info_display';
-import { WeatherDisplay } from './components/weather_display';
-
+import { AppRouter } from './routing/AppRouter';
 
 function App() {
   return (
-      <div className="App">
-        <header className="App-header">
-          <h1>Weather App</h1>
-        </header>
-        <main>
-          <WeatherDisplay region="Paris" />
-          <RegionInfoDisplay regionId={10} />
-        </main>
-      </div>
+    <div className="App">
+      <AppRouter />
+    </div>
   );
 }
 

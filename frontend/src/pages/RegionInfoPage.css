@@ -1,0 +1,216 @@
+.region-page {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #a29bfe 0%, #6c5ce7 100%);
+    padding: 2rem;
+}
+
+.page-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+    gap: 2rem;
+}
+
+.back-button {
+    padding: 10px 20px;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.back-button:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: translateX(-5px);
+}
+
+.page-header h1 {
+    color: white;
+    font-size: 2.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    margin: 0;
+}
+
+.region-selector {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.region-selector h2 {
+    color: white;
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+}
+
+.region-selector h3 {
+    color: white;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+.predefined-regions {
+    margin-bottom: 2rem;
+}
+
+.region-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+}
+
+.region-card {
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.region-card:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.region-card.active {
+    background: rgba(255, 255, 255, 0.3);
+    border-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 8px 25px rgba(255, 255, 255, 0.2);
+}
+
+.region-id {
+    font-size: 0.9rem;
+    opacity: 0.8;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.region-name {
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.custom-region-form {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.region-input {
+    flex: 1;
+    padding: 12px 16px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    border-radius: 25px;
+    backdrop-filter: blur(10px);
+    font-size: 1rem;
+}
+
+.region-input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.region-input:focus {
+    outline: none;
+    border-color: rgba(255, 255, 255, 0.8);
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.search-btn {
+    padding: 12px 24px;
+    background: linear-gradient(45deg, #fd79a8, #e84393);
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.search-btn:hover {
+    background: linear-gradient(45deg, #fd79a8, #d63384);
+    transform: scale(1.05);
+}
+
+.region-content {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 15px;
+    padding: 2rem;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Styles pour le composant RegionInfoDisplay intégré */
+.region-content > div {
+    background: transparent;
+}
+
+.region-content h2 {
+    color: #2d3436;
+    border-bottom: 2px solid #a29bfe;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+}
+
+.region-content p {
+    color: #636e72;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    padding: 0.8rem;
+    background: rgba(162, 155, 254, 0.1);
+    border-radius: 8px;
+    border-left: 4px solid #a29bfe;
+}
+
+.region-content p:last-child {
+    margin-bottom: 0;
+}
+
+/* Loading et error states */
+.region-content div {
+    font-size: 1.2rem;
+    text-align: center;
+    padding: 2rem;
+    color: #636e72;
+}
+
+@media (max-width: 768px) {
+    .region-page {
+        padding: 1rem;
+    }
+    
+    .page-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+    
+    .page-header h1 {
+        font-size: 2rem;
+    }
+    
+    .region-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .custom-region-form {
+        flex-direction: column;
+        align-items: stretch;
+    }
+}

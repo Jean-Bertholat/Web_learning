@@ -1,0 +1,114 @@
+.landing-page {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 2rem;
+}
+
+.landing-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.landing-header h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.landing-header p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+.landing-main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.navigation-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    width: 100%;
+}
+
+.nav-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 2rem;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.nav-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.nav-card h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: #fff;
+}
+
+.nav-card p {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+    line-height: 1.5;
+}
+
+.nav-button {
+    display: inline-block;
+    padding: 12px 24px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.weather-button {
+    background: linear-gradient(45deg, #ff6b6b, #feca57);
+    color: white;
+}
+
+.weather-button:hover {
+    background: linear-gradient(45deg, #ff5252, #ffb74d);
+    transform: scale(1.05);
+}
+
+.region-button {
+    background: linear-gradient(45deg, #4ecdc4, #44a08d);
+    color: white;
+}
+
+.region-button:hover {
+    background: linear-gradient(45deg, #26d0ce, #2d8659);
+    transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+    .landing-header h1 {
+        font-size: 2rem;
+    }
+    
+    .navigation-cards {
+        grid-template-columns: 1fr;
+    }
+    
+    .landing-page {
+        padding: 1rem;
+    }
+}
