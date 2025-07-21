@@ -1,7 +1,7 @@
 from typing import Dict, Any
 
-from ..schemas.region_resp_schema import RegionResponse
-from ..interfaces.Iregion_info_service import IRegionInformationService
+from backend.services.schemas.region_resp_schema import RegionResponse
+from backend.services.interfaces.Iregion_info_service import IRegionInformationService
 
 
 class RegionInformationService(IRegionInformationService):

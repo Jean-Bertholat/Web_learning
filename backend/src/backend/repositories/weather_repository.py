@@ -1,5 +1,4 @@
-
-from .interfaces import IWeatherRepository
+from backend.repositories.interfaces import IWeatherRepository
 from typing import Any, Dict, List
 from supabase import create_client, Client
 import os

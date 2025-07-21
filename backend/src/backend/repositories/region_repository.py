@@ -1,4 +1,4 @@
-from .interfaces import IRegionRepository
+from backend.repositories.interfaces import IRegionRepository
 from typing import Any, Dict, List
 
 # Exemple d'implémentation avec une fausse base (à remplacer par du SQLAlchemy, etc.)

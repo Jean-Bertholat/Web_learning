@@ -1,8 +1,8 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 import uvicorn
-from .controllers.country_info_controller import router as country_router
-from .controllers.weather_info_controller import router as weather_router
+from backend.controllers.country_info_controller import router as country_router
+from backend.controllers.weather_info_controller import router as weather_router
 
 
 app = FastAPI(title="AMADEUS")

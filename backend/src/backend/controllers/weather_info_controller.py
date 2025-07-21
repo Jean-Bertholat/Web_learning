@@ -1,8 +1,8 @@
 from fastapi.params import Depends
-from ..services.interfaces.Iweather_service import IWeatherService
-from ..services.implementation.weather_service import WeatherService, WeatherService1
+from backend.services.interfaces.Iweather_service import IWeatherService
+from backend.services.implementation.weather_service import WeatherService, WeatherService1
 from fastapi import APIRouter, Query
-from ..services.schemas.weather_resp_schema import WeatherResponse, WeatherForecastResponse
+from backend.services.schemas.weather_resp_schema import WeatherResponse, WeatherForecastResponse
 
 router = APIRouter()
 

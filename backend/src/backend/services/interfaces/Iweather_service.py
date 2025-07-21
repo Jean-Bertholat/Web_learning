@@ -1,8 +1,8 @@
 from abc import ABC, abstractmethod
 from typing import Dict, Any
 
-from ..schemas.region_resp_schema import RegionResponse
-from ..schemas.weather_resp_schema import WeatherResponse
+from backend.services.schemas.region_resp_schema import RegionResponse
+from backend.services.schemas.weather_resp_schema import WeatherResponse
 
 class IWeatherService(ABC):
     @abstractmethod

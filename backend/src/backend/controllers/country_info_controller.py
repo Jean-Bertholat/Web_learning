@@ -1,8 +1,8 @@
 from fastapi import APIRouter, Depends
 
-from ..services.interfaces.Iregion_info_service import IRegionInformationService
-from ..services.implementation.region_info_service import RegionInformationService
-from ..services.schemas.region_resp_schema import RegionResponse
+from backend.services.interfaces.Iregion_info_service import IRegionInformationService
+from backend.services.implementation.region_info_service import RegionInformationService
+from backend.services.schemas.region_resp_schema import RegionResponse
 
 
 router = APIRouter()
@@ -21,3 +21,6 @@ async def get_region(
     
     region_info = await region_service.get_region_info(region_id)
     return region_info
+
+
+# lib injector configuration 

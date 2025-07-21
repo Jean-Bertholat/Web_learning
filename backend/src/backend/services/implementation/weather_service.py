@@ -1,7 +1,7 @@
 from typing import Dict, Any
-from ..interfaces.Iweather_service import IWeatherService
+from backend.services.interfaces.Iweather_service import IWeatherService
 
-from ..schemas.weather_resp_schema import WeatherForecastResponse, WeatherResponse
+from backend.services.schemas.weather_resp_schema import WeatherForecastResponse, WeatherResponse
 
 
 class WeatherService(IWeatherService):
